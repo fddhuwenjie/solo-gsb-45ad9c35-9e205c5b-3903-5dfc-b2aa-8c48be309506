@@ -1,0 +1,12 @@
+services:
+  guide:
+    build: .
+    container_name: museum-guide
+    ports:
+      - "8000:8000"
+    volumes:
+      - guide-data:/data
+    restart: unless-stopped
+
+volumes:
+  guide-data:
